@@ -1,14 +1,23 @@
-import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
-import utilStyles from '../styles/utils.module.css'
+// import Head from 'next/head'
+// import Layout, { siteTitle } from '../components/layout'
+import Layout from '../components/layout'
+// import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
-import Link from 'next/link'
-import Date from '../components/date'
+// import Link from 'next/link'
+// import Date from '../components/date'
+import data from '../public/json/data.json'
+import useFiltersStore from '../store/filters'
 
 export default function Home({ allPostsData }) {
+  /*------------------------------
+  Zustand Actions
+  ------------------------------*/
+  const addFilters = useFiltersStore((store) => store.addFilters)
+  const removeFilters = useFiltersStore((store) => store.removeFilters)
+
   return (
     <Layout home>
-      <Head>
+      {/* <Head>
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
@@ -35,7 +44,23 @@ export default function Home({ allPostsData }) {
             </li>
           ))}
         </ul>
-      </section>
+      </section> */}
+      {data.map(item => (
+        <div
+          key={item.id}
+          onClick={() => addFilters(item.id)}
+        >
+          {item.company}
+        </div>
+      ))}
+      {data.map(item => (
+        <div
+          key={item.id}
+          onClick={() => removeFilters(item.id)}
+        >
+          {item.company}
+        </div>
+      ))}
     </Layout>
   )
 }
