@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 // import Head from 'next/head'
 // import Layout, { siteTitle } from '../components/layout'
 import Layout from '../components/layout'
@@ -12,8 +13,13 @@ export default function Home({ allPostsData }) {
   /*------------------------------
   Zustand Actions
   ------------------------------*/
+  const filters = useFiltersStore((state) => state.filters)
   const addFilters = useFiltersStore((store) => store.addFilters)
   const removeFilters = useFiltersStore((store) => store.removeFilters)
+
+  useEffect(() => {
+    window.console.log('filters ---->', filters)
+  },[filters])
 
   return (
     <Layout home>

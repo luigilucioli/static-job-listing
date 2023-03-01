@@ -23,7 +23,13 @@ const store = (set) => ({
   },
   removeFilters: (payload) => {
     set(
-      (state) => ({ filters: state.filters.filter(item => item !== payload) }),
+      (state) => {
+        if (state.filters.includes(payload)) {
+          return ({
+            filters: state.filters.filter(item => item !== payload)
+          })
+        }
+      },
       false,
       'FILTERS/REMOVE_FILTERS',
     )
