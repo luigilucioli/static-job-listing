@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 // import Head from 'next/head'
 // import Layout, { siteTitle } from '../components/layout'
 import Layout from '../components/layout'
+import ListItem from '../components/ListItem'
 // import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 // import Link from 'next/link'
@@ -19,7 +20,7 @@ export default function Home({ allPostsData }) {
 
   useEffect(() => {
     window.console.log('filters ---->', filters)
-  },[filters])
+  }, [filters])
 
   return (
     <Layout home>
@@ -67,6 +68,7 @@ export default function Home({ allPostsData }) {
           {item.company}
         </div>
       ))}
+      <ListItem label='ciao' />
     </Layout>
   )
 }
