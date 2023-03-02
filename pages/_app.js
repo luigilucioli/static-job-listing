@@ -1,5 +1,15 @@
 import '../styles/global.css'
+import { createEmotionSsrAdvancedApproach } from "tss-react/next/pagesDir";
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+const {
+  augmentDocumentWithEmotionCache,
+  withAppEmotionCache
+} = createEmotionSsrAdvancedApproach({ key: "css" });
+
+export { augmentDocumentWithEmotionCache };
+
+export default withAppEmotionCache(
+  function App({ Component, pageProps }) {
+    return <Component {...pageProps} />
+  }
+)
