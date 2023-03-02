@@ -2,7 +2,8 @@ import { useEffect } from 'react'
 // import Head from 'next/head'
 // import Layout, { siteTitle } from '../components/layout'
 import Layout from '@/components/layout'
-import ListItem from '../components/ListItem'
+import Header from '@/components/Header'
+import ListGroup from '@/components/ListGroup'
 // import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../../lib/posts'
 // import Link from 'next/link'
@@ -52,7 +53,7 @@ export default function Home({ allPostsData }) {
           ))}
         </ul>
       </section> */}
-      {data.map(item => (
+      {/* {data.map(item => (
         <div
           key={item.id}
           onClick={() => addFilters(item.id)}
@@ -68,7 +69,9 @@ export default function Home({ allPostsData }) {
           {item.company}
         </div>
       ))}
-      <ListItem label='ciao' />
+      <ListItem label='ciao' /> */}
+      <Header />
+      <ListGroup data={data} />
     </Layout>
   )
 }

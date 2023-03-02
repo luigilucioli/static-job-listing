@@ -1,9 +1,10 @@
 // import { useState, useRef, useEffect } from 'react'
 import { useStyles } from './style'
+import ListItem from '@/components/ListItem'
 
-function ListItem({
+function ListGroup({
   className,
-  item,
+  data,
 }) {
   const { classes, cx } = useStyles()
 
@@ -12,13 +13,17 @@ function ListItem({
       className={cx({
         [classes.root]: true,
         [className]: className,
-        list_item: true,
       })}
     >
-      {item.company}
+      {data.map(item => (
+        <ListItem
+          key={item.id}
+          item={item}
+        />
+      ))}
     </div>
   )
 }
 
 
-export default ListItem
+export default ListGroup
