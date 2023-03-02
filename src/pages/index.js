@@ -1,14 +1,14 @@
 import { useEffect } from 'react'
 // import Head from 'next/head'
 // import Layout, { siteTitle } from '../components/layout'
-import Layout from '../components/layout'
+import Layout from '@/components/layout'
 import ListItem from '../components/ListItem'
 // import utilStyles from '../styles/utils.module.css'
-import { getSortedPostsData } from '../lib/posts'
+import { getSortedPostsData } from '../../lib/posts'
 // import Link from 'next/link'
 // import Date from '../components/date'
-import data from '../public/json/data.json'
-import useFiltersStore from '../store/filters'
+import data from '../../public/json/data.json'
+import useFiltersStore from "@/store/filters"
 
 export default function Home({ allPostsData }) {
   /*------------------------------
