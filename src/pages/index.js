@@ -9,7 +9,7 @@ import { getSortedPostsData } from '../../lib/posts'
 // import Link from 'next/link'
 // import Date from '../components/date'
 import data from '../../public/json/data.json'
-import useFiltersStore from "@/store/filters"
+import useFiltersStore from '@/store/filters'
 
 export default function Home({ allPostsData }) {
   /*------------------------------

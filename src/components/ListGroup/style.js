@@ -1,12 +1,14 @@
 import { makeStyles } from '../../styles/makeStyle'
 
-const style = () => ({
+const style = (theme) => ({
   root: {
-    paddingTop: 75,
-    paddingLeft: '11%',
-    paddingRight: '11%',
+    padding: '75px 11% 120px',
+    backgroundColor: theme.colors.bgGreen,
     '& > *:not(:first-child)': {
-      marginTop:25,
+      marginTop: 25,
+      [theme.mq.md]: {
+        marginTop: 40,
+      },
     },
   },
 })

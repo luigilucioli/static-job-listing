@@ -6,6 +6,8 @@ const style = (theme) => ({
   },
   bgHeaderDesktop: {
     width: '100%',
+    minHeight: 160,
+    objectFit: 'cover',
     [theme.mq.sm]: {
       display: 'none',
     },
