@@ -1,15 +1,17 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
-import Link from 'next/link'
+// import Image from 'next/image'
+// import utilStyles from '../styles/utils.module.css'
+// import Link from 'next/link'
+import { useStyles } from './style'
 
-const name = 'Shu Uesugi'
-export const siteTitle = 'Next.js Sample Website'
+// const name = 'Shu Uesugi'
+export const siteTitle = 'Static listing job'
 
-export default function Layout({ children, home }) {
+function Layout({ children, home }) {
+  const { classes } = useStyles()
+
   return (
-    <div className={styles.container}>
+    <div className={classes.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -26,7 +28,7 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      <header className={styles.header}>
+      <header className={classes.header}>
         {/* {home ? (
           <>
             <Image
@@ -68,3 +70,5 @@ export default function Layout({ children, home }) {
     </div>
   )
 }
+
+export default Layout

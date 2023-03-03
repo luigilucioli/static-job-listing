@@ -8,6 +8,10 @@ function ListItem({
 }) {
   const { classes, cx } = useStyles()
   const [categories, setCategories] = useState([])
+
+  /*------------------------------
+  Zustand Actions
+  ------------------------------*/
   const addFilters = useFiltersStore((store) => store.addFilters)
 
   useEffect(() => {
