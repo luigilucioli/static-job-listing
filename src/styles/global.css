@@ -25,6 +25,10 @@ body {
   font-weight: 500;
 }
 
+body {
+  overflow-y: scroll;
+}
+
 main {
   min-height: 100vh;
   background-color: #f0fafb;
