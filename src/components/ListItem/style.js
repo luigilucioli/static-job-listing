@@ -82,6 +82,13 @@ const style = (theme) => ({
     fontSize: 21,
     color: theme.colors.darkGreen,
     paddingTop: 2,
+    transition: 'all 0.2s linear',
+    cursor: 'pointer',
+    '@media (hover: hover)': {
+      '&:hover': {
+        color: theme.colors.green,
+      },
+    },
     [theme.mq.md]: {
       paddingTop: 0,
       fontSize: 16,
