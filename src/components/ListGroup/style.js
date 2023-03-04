@@ -10,6 +10,9 @@ const style = (theme) => ({
         marginTop: 40,
       },
     },
+    [theme.mq.md]: {
+      padding: '75px 25px 120px',
+    },
   },
 })
 

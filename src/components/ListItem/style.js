@@ -46,10 +46,11 @@ const style = (theme) => ({
   containerCompany: {
     display: 'flex',
     '& h3': {
-      fontSize: 17,
+      fontSize: 18,
       color: theme.colors.green,
+      fontWeight: 500,
       [theme.mq.md]: {
-        fontSize: 14,
+        fontSize: 15,
       },
     },
   },
@@ -60,13 +61,10 @@ const style = (theme) => ({
     backgroundColor: theme.colors.green,
     fontSize: 13,
     textTransform: 'uppercase',
-    padding: '3px 8px 0px',
-    lineHeight: 2,
+    padding: '4px 8px 0px',
+    lineHeight: 1.5,
     borderRadius: 20,
     marginLeft: 15,
-    [theme.mq.md]: {
-      padding: '0px 8px 0px',
-    },
   },
   featured: {
     fontWeight: 700,
@@ -75,18 +73,17 @@ const style = (theme) => ({
     backgroundColor: theme.colors.darkGreen,
     fontSize: 13,
     textTransform: 'uppercase',
-    padding: '3px 8px 0px',
-    lineHeight: 2,
+    padding: '4px 8px 0px',
+    lineHeight: 1.5,
     borderRadius: 20,
     marginLeft: 10,
-    [theme.mq.md]: {
-      padding: '0px 8px 0px',
-    },
   },
   position: {
     fontSize: 21,
     color: theme.colors.darkGreen,
+    paddingTop: 2,
     [theme.mq.md]: {
+      paddingTop: 0,
       fontSize: 16,
       marginTop: 10,
     },
@@ -95,12 +92,12 @@ const style = (theme) => ({
     '& p': {
       fontWeight: 500,
       color: theme.colors.grey,
-      fontSize: 17,
+      fontSize: 16,
       display: 'inline-block',
       position: 'relative',
       zIndex: 1,
       '&:not(:first-child)': {
-        marginLeft: 40,
+        marginLeft: 36,
         '&:before': {
           content: '""',
           display: 'block',
@@ -110,7 +107,7 @@ const style = (theme) => ({
           borderRadius: '50%',
           position: 'absolute',
           top: '50%',
-          left: -20,
+          left: -18,
           transform: 'translate(-50%, -50%)',
         },
       },
@@ -148,7 +145,7 @@ const style = (theme) => ({
     border: 'none',
     borderRadius: 4,
     color: theme.colors.green,
-    padding: '7px',
+    padding: '10px 10px 7px',
     cursor: 'pointer',
     transition: 'all 0.2s linear',
     '@media (hover: hover)': {
