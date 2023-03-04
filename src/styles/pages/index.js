@@ -1,7 +1,4 @@
 export default (theme) => ({
-  wrapper: {
-    backgroundColor: theme.colors.bgGreen,
-  },
   content: {
     padding: '0px 11% 120px',
     position: 'relative',

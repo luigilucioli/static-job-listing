@@ -2,7 +2,7 @@ import { makeStyles } from '../../styles/makeStyle'
 
 const style = (theme) => ({
   root: {
-    '& > *:not(:first-child)': {
+    '& > *:not(:first-of-type)': {
       marginTop: 25,
       [theme.mq.md]: {
         marginTop: 40,

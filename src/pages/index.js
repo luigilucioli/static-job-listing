@@ -20,7 +20,7 @@ export default function Home({ allPostsData }) {
           <Filters />
           <ListGroup
             className={classes.listGroup}
-            data={data}
+            items={data}
           />
         </div>
       </div>

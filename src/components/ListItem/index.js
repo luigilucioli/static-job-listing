@@ -49,8 +49,9 @@ function ListItem({
         </div>
       </div>
       <div className={classes.containerCategory}>
-        {categories.map(item => (
+      {categories.map((item, index) => (
           <button
+            key={index}
             className={classes.category}
             onClick={() => addFilters(item)}
           >

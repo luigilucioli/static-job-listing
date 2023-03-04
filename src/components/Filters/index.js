@@ -16,7 +16,6 @@ function Filters({
   const removeAllFilters = useFiltersStore((store) => store.removeAllFilters)
 
   useEffect(() => {
-    window.console.log('filters ---->', filters)
     filters.length ? setFiltersVisible(true) : setFiltersVisible(false)
   }, [filters])
 

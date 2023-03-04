@@ -103,7 +103,7 @@ const style = (theme) => ({
       display: 'inline-block',
       position: 'relative',
       zIndex: 1,
-      '&:not(:first-child)': {
+      '&:not(:first-of-type)': {
         marginLeft: 36,
         '&:before': {
           content: '""',
@@ -121,7 +121,7 @@ const style = (theme) => ({
       [theme.mq.md]: {
         fontSize: 15,
         marginTop: 10,
-        '&:not(:first-child)': {
+        '&:not(:first-of-type)': {
           marginLeft: 25,
           '&:before': {
             left: -12,
