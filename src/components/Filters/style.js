@@ -2,30 +2,38 @@ import { makeStyles } from '../../styles/makeStyle'
 
 const style = (theme) => ({
   root: {
-    padding: '0px 11%',
     width: '100%',
     opacity: 0,
-    transition: 'opacity 0.3s linear',
-  },
-  rootVisible: {
-    opacity: 1,
-  },
-  wrapper: {
-    padding: '20px 40px',
+    padding: '10px 40px',
     borderRadius: 5,
     backgroundColor: theme.colors.white,
     boxShadow: `0 7px 15px -8px ${theme.getRgba(theme.colors.green, 0.5)}`,
     minHeight: 74,
     display: 'flex',
     justifyContent: 'space-between',
+    transition: 'opacity 0.1s linear',
+    [theme.mq.md]: {
+      minHeight: 0,
+      height: 0,
+      padding: '10px 20px',
+    },
+  },
+  rootVisible: {
+    opacity: 1,
+    [theme.mq.md]: {
+      height: 'auto',
+    },
   },
   containerFilters: {
     display: 'flex',
+    flexWrap: 'wrap',
   },
   filterButton: {
     position: 'relative',
     zIndex: 1,
+    margin: 10,
     marginRight: 15,
+    marginLeft: 0,
     backgroundColor: theme.colors.bgGreen,
     borderRadius: 4,
     padding: '10px 40px 7px 10px',
@@ -76,15 +84,18 @@ const style = (theme) => ({
     display: 'block',
     backgroundColor: 'transparent',
     border: 'none',
-    color: theme.colors.green,
     cursor: 'pointer',
     padding: 0,
     height: 'auto',
+    margin: 10,
+    marginRight: 0,
     '& span': {
       position: 'relative',
       zIndex: 1,
       display: 'block',
+      color: theme.colors.grey,
       fontSize: 15,
+      transition: `color .6s ${theme.easings['power3.out']}`,
       '&:before': {
         content: '""',
         position: 'absolute',
@@ -93,15 +104,16 @@ const style = (theme) => ({
         bottom: 1,
         width: '100%',
         height: 1,
-        backgroundColor: 'currentColor',
+        backgroundColor: theme.colors.green,
         transition: `transform .6s ${theme.easings['power3.out']}`,
-        transform: 'scaleX(1)',
+        transform: 'scaleX(0)',
         transformOrigin: '100% 0',
       },
       '@media (hover: hover)': {
         '&:hover': {
+          color: theme.colors.green,
           '&:before': {
-            transform: 'scaleX(0)',
+            transform: 'scaleX(1)',
             transformOrigin: '0 0',
           },
         },

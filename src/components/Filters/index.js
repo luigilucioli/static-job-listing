@@ -28,7 +28,6 @@ function Filters({
         [className]: className,
       })}
     >
-      <div className={classes.wrapper}>
         <div className={classes.containerFilters}>
           {filters.map((item, index) => (
             <div
@@ -52,7 +51,6 @@ function Filters({
         >
           <span>Clear</span>
         </button>
-      </div>
     </div>
   )
 }

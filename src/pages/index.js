@@ -15,9 +15,14 @@ export default function Home({ allPostsData }) {
   return (
     <Layout home>
       <Header />
-      <div className={classes.content}>
-        <Filters className={classes.filters}/>
-        <ListGroup data={data} />
+      <div className={classes.wrapper}>
+        <div className={classes.content}>
+          <Filters />
+          <ListGroup
+            className={classes.listGroup}
+            data={data}
+          />
+        </div>
       </div>
     </Layout>
   )
