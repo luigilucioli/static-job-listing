@@ -28,7 +28,8 @@ const style = (theme) => ({
     marginRight: 15,
     backgroundColor: theme.colors.bgGreen,
     borderRadius: 4,
-    padding: '7px',
+    padding: 7,
+    paddingLeft: 10,
     paddingRight: 45,
     overflow: 'hidden',
     width: 'fit-content',
@@ -38,8 +39,8 @@ const style = (theme) => ({
     '& span': {
       display: 'inline-block',
       color: theme.colors.green,
-      fontWeight: 700,
-      fontSize: 13,
+      fontWeight: 500,
+      fontSize: 15,
       cursor: 'default',
     },
     '& button': {
@@ -85,7 +86,7 @@ const style = (theme) => ({
       position: 'relative',
       zIndex: 1,
       display: 'block',
-      fontSize: 13,
+      fontSize: 15,
       '&:before': {
         content: '""',
         position: 'absolute',

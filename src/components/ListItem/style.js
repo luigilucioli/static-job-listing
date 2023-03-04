@@ -93,6 +93,7 @@ const style = (theme) => ({
   },
   containerDetails: {
     '& p': {
+      fontWeight: 500,
       color: theme.colors.grey,
       fontSize: 16,
       display: 'inline-block',
@@ -138,6 +139,8 @@ const style = (theme) => ({
     },
   },
   category: {
+    fontWeight: 500,
+    fontSize: 15,
     marginTop: 5,
     marginBottom: 5,
     marginLeft: 15,
@@ -145,7 +148,6 @@ const style = (theme) => ({
     border: 'none',
     borderRadius: 4,
     color: theme.colors.green,
-    fontWeight: 700,
     padding: '7px',
     cursor: 'pointer',
     transition: 'all 0.2s linear',
