@@ -21,10 +21,6 @@ function ListItem({
     item.tools.forEach(i => setCategories(current => [...current, i]))
   }, [])
 
-  useEffect(() => {
-    window.console.log('categories ---->', categories)
-  }, [categories])
-
   return (
     <div
       className={cx({

@@ -34,6 +34,13 @@ const store = (set) => ({
       'FILTERS/REMOVE_FILTERS',
     )
   },
+  removeAllFilters: () => {
+    set(
+      () => ({ filters: [] }),
+      false,
+      'FILTERS/REMOVE_ALL_FILTERS',
+    )
+  },
 })
 
 const useFiltersStore = create(devtools(store, { name: 'Filters Store' }))
