@@ -168,6 +168,9 @@ const style = (theme) => ({
       marginBottom: 0,
     },
   },
+  pointerEventsNone: {
+    pointerEvents: 'none',
+  },
 })
 
 export const useStyles = makeStyles({ name: 'ListItem' })(style)

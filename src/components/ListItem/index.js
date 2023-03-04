@@ -12,6 +12,7 @@ function ListItem({
   /*------------------------------
   Zustand Actions
   ------------------------------*/
+  const filters = useFiltersStore((store) => store.filters)
   const addFilters = useFiltersStore((store) => store.addFilters)
 
   useEffect(() => {
@@ -52,7 +53,10 @@ function ListItem({
       {categories.map((item, index) => (
           <button
             key={index}
-            className={classes.category}
+            className={cx({
+              [classes.category]: true,
+              [classes.pointerEventsNone]: filters.includes(item)
+            })}
             onClick={() => addFilters(item)}
           >
             {item}
