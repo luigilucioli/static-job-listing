@@ -18,6 +18,9 @@ function ListGroup({
   ------------------------------*/
   const filters = useFiltersStore((store) => store.filters)
 
+  /*------------------------------
+  Creation of a categories node within individual items
+  ------------------------------*/
   useEffect(() => {
     items = items.map(item => {
       item.categories = []
@@ -34,6 +37,9 @@ function ListGroup({
     setFilteredItems(items)
   }, [])
 
+  /*------------------------------
+  Filters change animation
+  ------------------------------*/
   useEffect(() => {
     if (!firstTime) {
       gsap.to($root.current, {
@@ -61,7 +67,9 @@ function ListGroup({
     setFirstTime(false)
   }, [filters])
 
-
+  /*------------------------------
+  Render
+  ------------------------------*/
   return (
     <div
       ref={$root}
@@ -79,6 +87,5 @@ function ListGroup({
     </div>
   )
 }
-
 
 export default ListGroup

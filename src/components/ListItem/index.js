@@ -15,6 +15,9 @@ function ListItem({
   const filters = useFiltersStore((store) => store.filters)
   const addFilters = useFiltersStore((store) => store.addFilters)
 
+  /*------------------------------
+  Set categories state
+  ------------------------------*/
   useEffect(() => {
     setCategories(current => [...current, item.role])
     setCategories(current => [...current, item.level])
@@ -22,6 +25,10 @@ function ListItem({
     item.tools.forEach(i => setCategories(current => [...current, i]))
   }, [])
 
+
+  /*------------------------------
+  Render
+  ------------------------------*/
   return (
     <div
       className={cx({
@@ -66,6 +73,5 @@ function ListItem({
     </div>
   )
 }
-
 
 export default ListItem

@@ -1,4 +1,4 @@
-import { makeStyles } from '../../styles/makeStyle'
+import { makeStyles } from '@/styles/makeStyle'
 
 const style = (theme) => ({
   root: {

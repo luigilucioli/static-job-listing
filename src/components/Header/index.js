@@ -1,4 +1,3 @@
-// import { useState, useRef, useEffect } from 'react'
 import { useStyles } from './style'
 
 function Header({
@@ -6,8 +5,11 @@ function Header({
 }) {
   const { classes, cx } = useStyles()
 
+  /*------------------------------
+  Render
+  ------------------------------*/
   return (
-    <div
+    <header
       className={cx({
         [classes.root]: true,
         [className]: className,
@@ -16,9 +18,8 @@ function Header({
     >
       <img className={classes.bgHeaderDesktop} src="./images/header/bg-header-desktop.svg" alt="bgHeaderDesktop" />
       <img className={classes.bgHeaderMobile} src="./images/header/bg-header-mobile.svg" alt="bgHeaderMobile" />
-    </div>
+    </header>
   )
 }
-
 
 export default Header

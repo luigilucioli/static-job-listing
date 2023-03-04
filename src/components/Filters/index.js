@@ -1,12 +1,10 @@
-import { useEffect, useState } from 'react'
-import { useStyles } from './style'
 import useFiltersStore from '@/store/filters'
+import { useStyles } from './style'
 
 function Filters({
   className,
 }) {
   const { classes, cx } = useStyles()
-  const [filtersVisible, setFiltersVisible] = useState(false)
 
   /*------------------------------
   Zustand Actions
@@ -15,15 +13,14 @@ function Filters({
   const removeFilters = useFiltersStore((store) => store.removeFilters)
   const removeAllFilters = useFiltersStore((store) => store.removeAllFilters)
 
-  useEffect(() => {
-    filters.length ? setFiltersVisible(true) : setFiltersVisible(false)
-  }, [filters])
-
+  /*------------------------------
+  Render
+  ------------------------------*/
   return (
     <div
       className={cx({
         [classes.root]: true,
-        [classes.rootVisible]: filtersVisible,
+        [classes.rootVisible]: filters.length,
         [className]: className,
       })}
     >

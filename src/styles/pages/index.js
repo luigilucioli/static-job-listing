@@ -1,4 +1,6 @@
-export default (theme) => ({
+import { makeStyles } from '@/styles/makeStyle'
+
+const style = (theme) => ({
   content: {
     padding: '0px 11% 83px',
     position: 'relative',
@@ -15,3 +17,5 @@ export default (theme) => ({
     },
   },
 })
+
+export const useStyles = makeStyles({ name: 'Home' })(style)

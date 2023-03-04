@@ -1,4 +1,4 @@
-import { makeStyles } from '../../styles/makeStyle'
+import { makeStyles } from '@/styles/makeStyle'
 
 const style = (theme) => ({
   root: {
@@ -11,7 +11,7 @@ const style = (theme) => ({
     minHeight: 74,
     display: 'flex',
     justifyContent: 'space-between',
-    transition: 'opacity 0.1s linear',
+    transition: 'opacity 0.2s linear',
     [theme.mq.md]: {
       minHeight: 0,
       height: 0,
@@ -37,7 +37,7 @@ const style = (theme) => ({
     marginLeft: 0,
     backgroundColor: theme.colors.bgGreen,
     borderRadius: 4,
-    padding: '10px 40px 7px 10px',
+    padding: '10px 43px 7px 10px',
     overflow: 'hidden',
     width: 'fit-content',
     height: 32,
