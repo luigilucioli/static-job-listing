@@ -1,7 +1,7 @@
-import Layout from '../layout'
 import Header from '@/components/Header'
 import ListGroup from '@/components/ListGroup'
 import Filters from '@/components/Filters'
+import Layout from '../layout'
 import { getSortedPostsData } from '../../lib/posts'
 import data from '../../public/json/data.json'
 import { makeStyles } from '@/styles/makeStyle'

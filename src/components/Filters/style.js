@@ -16,6 +16,7 @@ const style = (theme) => ({
       minHeight: 0,
       height: 0,
       padding: '10px 20px',
+      transition: 'unset',
     },
   },
   rootVisible: {
