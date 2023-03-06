@@ -7,6 +7,11 @@ const leagueSpartan = localFont({
       weight: '500',
       style: 'normal',
     },
+    {
+      path: './fonts/LeagueSpartan-Bold.woff2',
+      weight: '700',
+      style: 'normal',
+    },
   ],
   preload: true,
   variable: '--primary-font'
