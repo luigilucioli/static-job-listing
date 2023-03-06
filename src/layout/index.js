@@ -9,7 +9,7 @@ function Layout({ children }) {
   return (
     <div>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="./favicon.ico" />
         <meta
           name="description"
           content="Static listing job"
