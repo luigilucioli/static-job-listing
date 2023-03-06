@@ -1,6 +1,7 @@
 import { createEmotionSsrAdvancedApproach } from "tss-react/next/pagesDir";
 import FakeLoader from "@/components/FakeLoader";
-import '../styles/global.css'
+import '@/assets/css/font.css'
+import '@/styles/global.css'
 
 const {
   augmentDocumentWithEmotionCache,
