@@ -46,6 +46,9 @@ function ListGroup({
         duration: 0.2,
         opacity: 0,
         onComplete: () => {
+          /*------------------------------
+          Filtering of elements if there are filters
+          ------------------------------*/
           if (filters.length) {
             let fitered = []
             items.map(item => {
@@ -55,6 +58,9 @@ function ListGroup({
             })
             setFilteredItems(fitered)
           } else {
+            /*------------------------------
+            If there are no filters, set the state to the starting condition
+            ------------------------------*/
             setFilteredItems(items)
           }
           gsap.to($root.current, {
