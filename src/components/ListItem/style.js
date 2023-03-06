@@ -80,6 +80,7 @@ const style = (theme) => ({
     marginLeft: 10,
   },
   position: {
+    fontFamily: theme.fonts.leagueSpartan,
     fontSize: 21,
     color: theme.colors.darkGreen,
     paddingTop: 2,
