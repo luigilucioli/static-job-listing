@@ -43,7 +43,7 @@ function ListGroup({
   useEffect(() => {
     if (!firstTime) {
       gsap.to($root.current, {
-        duration: 0.4,
+        duration: 0.2,
         opacity: 0,
         onComplete: () => {
           if (filters.length) {
@@ -58,7 +58,8 @@ function ListGroup({
             setFilteredItems(items)
           }
           gsap.to($root.current, {
-            duration: 0.4,
+            duration: 0.2,
+            delay: 0.1,
             opacity: 1,
           })
         }

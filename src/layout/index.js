@@ -1,13 +1,13 @@
 import Head from 'next/head'
-import { useStyles } from './style'
+// import { useStyles } from './style'
 
 export const siteTitle = 'Static listing job'
 
 function Layout({ children }) {
-  const { classes } = useStyles()
+  // const { classes } = useStyles()
 
   return (
-    <div className={classes.container}>
+    <div>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta

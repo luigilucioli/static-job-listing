@@ -51,6 +51,7 @@ const style = (theme) => ({
       fontWeight: 500,
       [theme.mq.md]: {
         fontSize: 15,
+        paddingTop: 3,
       },
     },
   },
@@ -91,7 +92,7 @@ const style = (theme) => ({
     },
     [theme.mq.md]: {
       paddingTop: 0,
-      fontSize: 16,
+      fontSize: 15,
       marginTop: 10,
     },
   },
@@ -119,7 +120,7 @@ const style = (theme) => ({
         },
       },
       [theme.mq.md]: {
-        fontSize: 15,
+        fontSize: 14,
         marginTop: 10,
         '&:not(:first-of-type)': {
           marginLeft: 25,
