@@ -1,6 +1,5 @@
 import { createEmotionSsrAdvancedApproach } from "tss-react/next/pagesDir";
 import FakeLoader from "@/components/FakeLoader";
-import '@/assets/css/font.css'
 import '@/styles/global.css'
 
 const {
